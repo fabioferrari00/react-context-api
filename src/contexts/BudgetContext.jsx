@@ -14,13 +14,11 @@ const BudgetProvider = ({ children }) => {
     setBudgetMode(!budgetMode);
   }
 
-  const value = {
-    budgetMode,
-    setBudgetMode
-  }
-
   return (
-    <BudgetContext.Provider value={{ value }}>
+    <BudgetContext.Provider value={{
+      budgetMode,
+      toggleBudgetMode
+    }}>
       {children}
     </BudgetContext.Provider>
   )
@@ -28,9 +26,9 @@ const BudgetProvider = ({ children }) => {
 };
 
 //creo un hook per utilizzare il contesto
-const useBudgetMode = () => {
+const useBudget = () => {
   const context = useContext(BudgetContext);
   return context;
 };
 
-export { BudgetProvider, useBudgetMode };
+export { BudgetProvider, useBudget };
