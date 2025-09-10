@@ -1,0 +1,19 @@
+.header a {
+  text-decoration: none;
+}
+
+header a.active {
+  background-color: black;
+  color: white;
+}
+
+.card {
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.pagination-btn-prod {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
